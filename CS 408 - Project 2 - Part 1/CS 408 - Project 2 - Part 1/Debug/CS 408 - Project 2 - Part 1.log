@@ -1,0 +1,11 @@
+﻿  Driver.cpp
+c:\source\cs-408-project-2\cs-408-project-2\cs 408 - project 2 - part 1\cs 408 - project 2 - part 1\driver.cpp(13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\source\cs-408-project-2\cs-408-project-2\cs 408 - project 2 - part 1\cs 408 - project 2 - part 1\driver.cpp(73): warning C4018: '<': signed/unsigned mismatch
+c:\source\cs-408-project-2\cs-408-project-2\cs 408 - project 2 - part 1\cs 408 - project 2 - part 1\driver.cpp(75): warning C4018: '<': signed/unsigned mismatch
+c:\source\cs-408-project-2\cs-408-project-2\cs 408 - project 2 - part 1\cs 408 - project 2 - part 1\driver.cpp(84): warning C4018: '<': signed/unsigned mismatch
+c:\source\cs-408-project-2\cs-408-project-2\cs 408 - project 2 - part 1\cs 408 - project 2 - part 1\driver.cpp(86): warning C4018: '<': signed/unsigned mismatch
+c:\source\cs-408-project-2\cs-408-project-2\cs 408 - project 2 - part 1\cs 408 - project 2 - part 1\driver.cpp(95): warning C4018: '<': signed/unsigned mismatch
+c:\source\cs-408-project-2\cs-408-project-2\cs 408 - project 2 - part 1\cs 408 - project 2 - part 1\driver.cpp(97): warning C4018: '<': signed/unsigned mismatch
+c:\source\cs-408-project-2\cs-408-project-2\cs 408 - project 2 - part 1\cs 408 - project 2 - part 1\driver.cpp(100): warning C4018: '<': signed/unsigned mismatch
+  CS 408 - Project 2 - Part 1.vcxproj -> C:\Source\CS-408-Project-2\CS-408-Project-2\CS 408 - Project 2 - Part 1\Debug\CS 408 - Project 2 - Part 1.exe
+  CS 408 - Project 2 - Part 1.vcxproj -> C:\Source\CS-408-Project-2\CS-408-Project-2\CS 408 - Project 2 - Part 1\Debug\CS 408 - Project 2 - Part 1.pdb (Partial PDB)
