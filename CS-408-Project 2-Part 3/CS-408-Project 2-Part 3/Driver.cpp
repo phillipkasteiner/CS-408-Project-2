@@ -1,16 +1,17 @@
-// CS-408-Project 2-Part 3.cpp : Defines the entry point for the console application.
-//
 
 #include "Matrix.h"
 #include <iostream>
+#include <ctime>
 
 using namespace std;
 
-void prompt(Matrix &, Matrix &);
+void createMatrix(Matrix &, int);
 
 int main()
 {
-	const int MAX = 5;
+	srand(time(NULL));
+
+	int matrixSize = 0;
 	int choice = 0;
 	Matrix result;
 	Matrix m1;
@@ -22,21 +23,61 @@ int main()
 		cout << "1) M3 = M1 + M2" << endl;
 		cout << "2) M4 = M1 - M2" << endl;
 		cout << "3) M5 = M1 * M2" << endl;
+		cout << "(-1 to exit)" << endl;
 		cout << "> ";
 		cin >> choice;
 		if (choice == 1) 
 		{
+			cout << endl << "Addition" << endl;
+			cout << "Please enter the demensions of your matrix." << endl;
+			cout << "> ";
+			cin >> matrixSize;
+			createMatrix(m1, matrixSize);
+			createMatrix(m2, matrixSize);
+			cout << "Matrix creation complete..." << endl;
+			cout << "Adding M1 and M2" << endl;
+			cout << "M1" << endl;
+			m1.print();
+			cout << "M2" << endl;
+			m2.print();
 			result = m1 + m2;
+			cout << "Sum of Matricies" << endl;
 			result.print();
 		}
 		else if (choice == 2)
 		{
+			cout << endl << "Subtraction" << endl;
+			cout << "Please enter the demensions of your matrix." << endl;
+			cout << "> ";
+			cin >> matrixSize;
+			createMatrix(m1, matrixSize);
+			createMatrix(m2, matrixSize);
+			cout << "Matrix creation complete..." << endl;
+			cout << "Subtracting M1 and M2" << endl;
+			cout << "M1" << endl;
+			m1.print();
+			cout << "M2" << endl;
+			m2.print();
 			result = m1 - m2;
+			cout << "Difference of Matricies" << endl;
 			result.print();
 		}
 		else if (choice == 3) 
 		{
+			cout << endl << "Multiplication" << endl;
+			cout << "Please enter the demensions of your matrix." << endl;
+			cout << "> ";
+			cin >> matrixSize;
+			createMatrix(m1, matrixSize);
+			createMatrix(m2, matrixSize);
+			cout << "Matrix creation complete..." << endl;
+			cout << "Multipling M1 and M2" << endl;
+			cout << "M1" << endl;
+			m1.print();
+			cout << "M2" << endl;
+			m2.print();
 			result = m1 * m2;
+			cout << "Product of M1 and M2" << endl;
 			result.print();
 		}
 		else if (choice == -1)
@@ -45,31 +86,21 @@ int main()
 		}
 		else 
 		{
-			cout << "============================" << endl;
-			continue;
+			cout << "Invalid Input" << endl << endl;
 		}
-	} while (choice != 0);
+	} while (choice != -1);
 }
 
-void prompt(Matrix &m1) 
+void createMatrix(Matrix &m1, int max) 
 {
-	int rows;
-	int cols;
-	cout << "(enter all values separated by sign space)" << endl;
-	cout << "Choose your matrix sizes (ex: 3 2) > ";
-	cin >> rows >> cols;
-	double **temp = new double*[rows];
-	for (unsigned int i = 0; i < rows; i++) 
+	double **temp = new double*[max];
+	for (unsigned int i = 0; i < max; i++)
 	{
-		temp[i] = new double[cols];
-	}
-	for (unsigned int i = 0; i < rows; i++) 
-	{
-		cout << "Enter values for row #" << i << endl;
-		for (unsigned int j = 0; j < cols; j++)
+		temp[i] = new double[max];
+		for (unsigned int j = 0; j < max; j++)
 		{
-			cout << "> ";
-			cin >> temp[i][j];
+			temp[i][j] = rand() % 20 - 10;
 		}
 	}
+	m1 = Matrix(temp, max, max);
 }

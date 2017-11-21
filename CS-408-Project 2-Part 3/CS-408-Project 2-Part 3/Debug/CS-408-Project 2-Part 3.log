@@ -1,0 +1,5 @@
+﻿  Matrix.cpp
+c:\source\cs-408-project-2\cs-408-project-2\cs-408-project 2-part 3\cs-408-project 2-part 3\matrix.cpp(94): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Driver.cpp
+c:\source\cs-408-project-2\cs-408-project-2\cs-408-project 2-part 3\cs-408-project 2-part 3\driver.cpp(106): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Generating Code...
