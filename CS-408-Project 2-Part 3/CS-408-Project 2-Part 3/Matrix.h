@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -20,7 +21,7 @@ public:
 
 	void print();
 
-	~Matrix();
+
 private:
 	double** matrix;
 	int rows;

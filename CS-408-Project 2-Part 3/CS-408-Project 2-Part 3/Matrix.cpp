@@ -13,12 +13,18 @@ Matrix::Matrix(int r,int c)
 	for (unsigned int i = 0; i < rows; i++)
 	{
 		matrix[i] = new double[cols];
+		for (unsigned int j = 0; j < cols; j++)
+		{
+			matrix[i][j] = 0;
+		}
 	}
 }
 
-Matrix::Matrix(double ** m, int row , int col)
+Matrix::Matrix(double ** m, int r , int c)
 {
 	matrix = m;
+	rows = r;
+	cols = c;
 }
 
 Matrix Matrix::operator+(Matrix &m)
@@ -81,15 +87,13 @@ void Matrix::print()
 {
 	for (unsigned int i = 0; i < getRows(); i++) 
 	{
-		cout << "|\t";
+		cout << "|";
 		for (unsigned int j = 0; j < getCols(); j++) 
 		{
-			cout << getMatrix()[i][j] << '\t';
+			cout << setw(5) << getMatrix()[i][j];
 		}
 		cout << "|\n";
 	}
 }
 
-Matrix::~Matrix()
-{
-}
+
